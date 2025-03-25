@@ -1,0 +1,98 @@
+@import "./variables.scss";
+
+.attendancePage {
+  padding: 20px;
+  text-align: center;
+  background-color: $primary-bg;
+  color: $text-color;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+// Buttons for marking attendance
+.actionButtons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .presentBtn {
+    background-color: green;
+    color: white;
+
+    &:hover {
+      background-color: darkgreen;
+    }
+  }
+
+  .absentBtn {
+    background-color: red;
+    color: white;
+
+    &:hover {
+      background-color: darkred;
+    }
+  }
+}
+
+// Table wrapper for scrollability
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.attendanceTable {
+  width: 90%;
+  min-width: 600px;
+  margin: auto;
+  border-collapse: collapse;
+  background: $card-bg;
+  color: $text-color;
+  border-radius: 8px;
+
+  th, td {
+    border: 1px solid $bordercolor;
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    background: $secondary-bg;
+    color: $accent-color;
+  }
+
+  tr:nth-child(even) {
+    background: darken($card-bg, 5%);
+  }
+
+  tr:hover {
+    background: lighten($card-bg, 5%);
+  }
+
+  .present {
+    color: lime;
+    font-weight: bold;
+  }
+
+  .absent {
+    color: red;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 768px) {
+  .tableContainer {
+    padding: 10px;
+  }
+}

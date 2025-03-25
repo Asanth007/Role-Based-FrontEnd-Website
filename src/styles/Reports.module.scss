@@ -1,0 +1,92 @@
+.report-page {
+  padding: 20px;
+  color: #fff;
+  background: linear-gradient(135deg, #1e1e2e, #2d2d44);
+  text-align: center;
+
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #c792ea;
+  }
+
+  .kpi-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    .kpi-card {
+      background: #6c5ce7;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #fff;
+      min-width: 120px;
+      max-width: 200px;
+      text-align: center;
+      flex: 1 1 calc(25% - 15px); // 4 per row
+
+      @media (max-width: 768px) {
+        flex: 1 1 calc(50% - 15px); // 2 per row on tablets
+      }
+
+      @media (max-width: 480px) {
+        flex: 1 1 100%; // 1 per row on small screens
+      }
+    }
+  }
+
+  .charts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr; // 2x2 grid on PC
+    }
+
+    .chart-container {
+      background: #2d2d44;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+
+      .chart-select {
+        margin-bottom: 10px;
+        padding: 5px;
+        font-size: 16px;
+        background-color: #6c5ce7;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .loading {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+
+    .spinner {
+      margin: 10px auto;
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid #6c5ce7;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

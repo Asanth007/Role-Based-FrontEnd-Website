@@ -1,0 +1,78 @@
+@use "../styles/variables" as *;
+
+.contactContainer {  // ✅ Change this
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: $card-bg !important;
+  border-radius: 12px;
+  box-shadow: $shadow;
+  text-align: center;
+  color: $text-color;
+
+  h2 {
+    font-size: 32px;
+    color: $accent-color;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .contactInfo {  // ✅ Change this
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+
+    .infoItem {  // ✅ Change this
+      background: lighten($card-inner-bg, 5%);
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: $hover-shadow;
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      h3 {
+        font-size: 20px;
+        color: $accent-color;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .socialLinks {  // ✅ Change this
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+
+    a {
+      color: $accent-color;
+      font-size: 18px;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: lighten($accent-color, 15%);
+      }
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contactContainer {  // ✅ Change this
+    max-width: 90%;
+    padding: 20px;
+  }
+}

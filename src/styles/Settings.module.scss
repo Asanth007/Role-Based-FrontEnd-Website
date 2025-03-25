@@ -1,0 +1,91 @@
+@import "./variables";
+
+.settingsContainer {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 25px;
+  background: $card-bg;
+  border-radius: 12px;
+  box-shadow: $shadow;
+  color: $text-color;
+  text-align: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .settingsContainer {
+    max-width: 90%;
+    backdrop-filter: blur(3px); // Reduce blur even more on mobile
+  }
+}
+
+.settingsTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: $accent-color;
+}
+
+.settingsSection {
+  margin-top: 20px;
+  background: lighten($card-inner-bg, 8%);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: $hover-shadow;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: lighten($card-inner-bg, 15%);
+    transform: scale(1.02);
+  }
+}
+
+.sectionTitle {
+  font-size: 20px;
+  color: $accent-color;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.settingsList {
+  list-style: none;
+  padding: 0;
+}
+
+.settingsItem {
+  padding: 12px;
+  font-size: 18px; /* Increased font size */
+  border-radius: 6px;
+  transition: all 0.3s;
+  cursor: pointer;
+  color: $text-color;
+
+  &:hover {
+    background: $hover-bg;
+    color: $accent-color;
+    transform: translateX(5px);
+  }
+}
+
+.errorMessage {
+  color: red;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Background effect */
+body {
+  background: linear-gradient(180deg, $background-color, darken($background-color, 5%));
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .settingsContainer {
+    max-width: 90%;
+  }
+}

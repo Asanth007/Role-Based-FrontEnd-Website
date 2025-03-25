@@ -1,0 +1,128 @@
+@import "../styles/_variables.scss";
+
+.adminPage {
+  background-color: $primary-bg;
+  color: $text-color;
+  padding: 20px;
+  min-height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 📌 Responsive Add User Form */
+.addUserForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  justify-content: center;
+
+  input, select {
+    padding: 8px;
+    border: 1px solid $bordercolor;
+    border-radius: 4px;
+    background: $card-bg;
+    color: $text-color;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .addBtn {
+    background: $accent-color;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+    width: 100%;
+    max-width: 150px;
+
+    &:hover {
+      background: darken($accent-color, 10%);
+    }
+  }
+}
+
+/* 📌 Responsive Table */
+.userTable {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  background: $card-bg;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: $shadow;
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid $bordercolor;
+  }
+
+  th {
+    background: $navbar-bg;
+  }
+
+  .removeBtn {
+    background: rgb(220, 50, 50);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+
+    &:hover {
+      background: rgb(180, 30, 30);
+    }
+  }
+}
+
+/* 📌 Mobile-Friendly Styles */
+@media (max-width: 768px) {
+  .userTable {
+    display: block;
+    overflow-x: auto; /* Scrollable table on small screens */
+  }
+
+  .userTable th, .userTable td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .addUserForm {
+    flex-direction: column;
+    align-items: center;
+    
+    input, select, .addBtn {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .userTable th, .userTable td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .removeBtn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}

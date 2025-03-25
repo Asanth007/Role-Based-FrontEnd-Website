@@ -1,0 +1,9 @@
+@use "./variables" as *; // Import variables
+// @use "./globals" as *; 
+
+.welcome {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: $accent-color;
+}

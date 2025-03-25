@@ -1,0 +1,63 @@
+@import "./variables";
+.taskContainer {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: #1e1e2e;
+    color: white;
+    border-radius: 8px;
+  }
+  
+  .taskInput {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .taskInput input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .taskInput button {
+    background: #4a4aff;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .taskList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2d2d44;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    span{
+        flex: 1;
+    }
+  }
+  
+  .taskItem button {
+    margin-top: 10px;
+    color: #fff;
+  background: lighten($card-inner-bg, 8%);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: $hover-shadow;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: lighten($card-inner-bg, 15%);
+    transform: scale(1.02);
+  }}
+  

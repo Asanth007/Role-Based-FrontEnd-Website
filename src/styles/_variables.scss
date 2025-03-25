@@ -1,0 +1,31 @@
+// Primary Theme Colors
+$primary-bg: rgb(12, 12, 40);  // Slightly deeper for a premium look
+$secondary-bg: rgb(25, 25, 65);  
+$text-color: rgb(235, 240, 255); // Increased brightness for contrast
+$accent-color: rgb(120, 90, 255); // Warmer neon purple for better visibility
+$background-color: #0c0c28; // Dark theme background
+$navbar-bg: rgb(22, 22, 55); // Slightly lighter than primary-bg for contrast
+$bordercolor: accent-color; // Use accent color for borders
+// Additional UI Colors
+
+$card-bg: rgb(28, 28, 50);  
+$card-inner-bg: rgb(38, 38, 75);  
+$shadow: 0px 6px 12px rgba(0, 0, 0, 0.25); // Softer, modern shadow effect
+$btncolor:#ff6600;
+// Hover Effect Colors
+$hover-bg: lighten($card-bg, 5%); 
+$hover-shadow: 0px 8px 16px rgba(0, 0, 0, 0.35);
+
+
+:export {
+  primaryBg: $primary-bg;
+  secondaryBg: $secondary-bg;
+  textColor: $text-color;
+  accentColor: $accent-color;
+  cardBg: $card-bg;
+  cardInnerBg: $card-inner-bg;
+  background: $background-color;
+  navbarBg: $navbar-bg;
+  bordercolor: $bordercolor;
+  btncolor:$btncolor
+}

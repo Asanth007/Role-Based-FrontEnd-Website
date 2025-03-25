@@ -1,0 +1,23 @@
+@import "../styles/variables";
+
+.card {
+  margin-bottom: 10px;
+  background: $card-inner-bg;
+  color: $text-color;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: $shadow;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .card-content {
+    background-color: $card-inner-bg;
+    padding: 10px;
+    border-radius: 6px;
+    color: $text-color;
+  }
+}

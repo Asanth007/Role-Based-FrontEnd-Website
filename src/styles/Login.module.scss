@@ -1,0 +1,95 @@
+// login.module.scss
+@import "../styles/variables";
+$primary-bg: #4a90e2;
+$signup: #4a90e2;
+
+$error-color: #ff4d4d;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $accent-color;
+  background: linear-gradient(135deg, $background-color, $accent-color);
+}
+
+.formWrapper {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.signupMode {
+  border-top: 5px solid $signup
+}
+
+.heading {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: $primary-bg;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  margin-bottom: 1rem;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: $primary-bg;
+}
+
+.error {
+  color: $error-color;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+.button {
+  background: $btncolor;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.toggleText {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.toggleLink {
+  color: $primary-bg;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.toggleLink:hover {
+  text-decoration: underline;
+}

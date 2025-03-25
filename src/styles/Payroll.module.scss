@@ -1,0 +1,56 @@
+.payrollPage {
+  padding: 20px;
+  text-align: center;
+  background-color: #0a0a23; // Dark but readable background
+  color: white;
+  overflow-x: auto;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+// Wrapper to make table scrollable on small screens
+.tableContainer {
+  width: 100%;
+   
+}
+
+.payrollTable {
+  width: 90%;
+  min-width: 600px; // Ensures table doesn’t shrink too much
+  margin: auto;
+  border-collapse: collapse;
+  background: #1b1b32;
+  color: white;
+  border-radius: 8px;
+  
+
+  th, td {
+    border: 1px solid #444;
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    background: #282c34;
+    color: #ffcc00; // Highlighted header
+  }
+
+  tr:nth-child(even) {
+    background: #222;
+  }
+
+  tr:hover {
+    background: #333;
+  }
+}
+
+// Ensure scrolling is visible on smaller screens
+@media (max-width: 768px) {
+  .tableContainer {
+    padding: 10px;
+  }
+}
